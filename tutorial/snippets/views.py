@@ -51,5 +51,7 @@ class SnippetHighlight(generics.GenericAPIView):
 
     def get(self, request, *args, **kwargs):
         snippet = self.get_object()
+        print snippet
+        print dir(snippet)
         return Response(snippet.highlighted)
 
